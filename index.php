@@ -6,7 +6,8 @@
 </head>
 <body>
 	<div class="wrap">
-		<ul class="task-list">
+		<div class="task-list">
+		<ul>
 		<?php require("includes/connect.php"); ?>	
 		</ul>
 	</div>
