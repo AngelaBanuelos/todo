@@ -32,6 +32,15 @@
 			return false;
 		});
 	}
+	$(".delete-button").click(function(){
+		var current_element = $(this);
+		var task_id = $(this).attr('id');
+		current_element.parent().fadeOut("fast", function(){
+			$(this).remove[];
 
+		});
+
+	});
+});
 </script>
 </html>
