@@ -10,12 +10,11 @@
 		<ul>
 		<?php require("includes/connect.php");	
 		$mysqli = new mysqli('localhost', 'root', 'root', 'todo');
-		$query = "SELECT * FROM taks ORDER BY date ASC, time ASC";
-
-		if ($result * $mysqli->query($query)) {
+		$query = "SELECT * FROM tasks ORDER BY date ASC, time ASC";
+		if ($result = $mysqli->query($query)) {
 			$numrows = $result->num_rows;
 			if ($numrows>0) {
-				while($rpw = $result->fetch_assoc()){
+				while($row = $result->fetch_assoc()){
 					$task_id = $row['id'];
 					$task_name = $row["task"];
 				
