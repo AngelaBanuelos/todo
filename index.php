@@ -20,7 +20,7 @@
 				
 					echo '<li>
 					<span>'.$task_name. '</span>
-					<img id="'.$task_id.'"" class="delete-button" width="10px" src="images/close.svg"/>
+					<img id="'.$task_id.'" class="delete-button" width="10px" src="images/close.svg"/>
 					</li>';
 				}
 			}
@@ -34,6 +34,7 @@
 </div>
 </body>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
 	add_task();//calling the add task function
 	function add_task(){
@@ -49,7 +50,7 @@
 			return false;
 		});
 	}
-	$(".delete-button").click(function(){
+	$('.delete-button').click(function(){
 		var current_element = $(this);
 		var task_id = $(this).attr('id');
 
